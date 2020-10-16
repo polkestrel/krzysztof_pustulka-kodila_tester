@@ -5,7 +5,7 @@ public class MainExtended {
         double myHeight = 1.80;
         char carClass = 'B';
         boolean isMale = true;
-        float myCalculation = 1.f / 81;
+        float myCalculation = 1 / 81.f;
         System.out.println(myName);
         System.out.println(myAge);
         System.out.println(myHeight);
