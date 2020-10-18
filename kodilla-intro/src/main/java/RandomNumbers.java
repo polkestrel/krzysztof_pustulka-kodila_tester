@@ -19,10 +19,12 @@ public class RandomNumbers {
 
             if (wylosowanaLiczba > max) {               // pętla do zdefiniowania największej wylosowanej liczby
                 max = wylosowanaLiczba;
+                System.out.println("Największa wylosowana liczba się zmieniła i wynosi teraz: " +max);
             }
 
             if (wylosowanaLiczba < min) {               //pętla do zdefiniowania najmniejszej wylosowanej liczby
                 min =   wylosowanaLiczba;
+                System.out.println("Najmniejsza wylosowana liczba się zmieniła i wynosi teraz: " + min);
             }
         }
         System.out.println("Nasza suma wynosi teraz więcej niż 5000, a więc czas przerwać działanie programu.");
