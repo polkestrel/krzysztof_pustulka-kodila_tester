@@ -18,15 +18,5 @@ public class FirstClass {
         oldNotebook.checkPrice();
         oldNotebook.checkWeight();
         oldNotebook.checkYearAndPrice();
-
-
-        /*
-        if (notebook.price<900) {
-            System.out.println("This notebook is cheap");
-        } else {
-            System.out.println("This notebook is quite expensive");
-        }
-        */
-
     }
 }
