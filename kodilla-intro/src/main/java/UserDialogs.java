@@ -36,7 +36,7 @@ public class UserDialogs {
             String calc = scanner.nextLine().trim().toUpperCase();
             switch (calc) {
                 case "A": return "ADD";
-                case "B": return "SUB";
+                case "S": return "SUB";
                 case "D": return "DIV";
                 case "M": return "MUL";
                 default:
