@@ -2,6 +2,8 @@ import java.util.Scanner;
 
 public class Colours {
 
+    private static ColoursName colours;
+
     enum ColoursName {
         B,  //Blue
         Y,  //Yellow
@@ -9,8 +11,14 @@ public class Colours {
     }
 
     public static void main(String[] args) {
-        ColoursName Colours = ColoursName.valueOf(getColoursName());
-        switch (Colours) {
+        try {
+            colours = ColoursName.valueOf(getColoursName());
+        } catch (IllegalArgumentException ex) {
+            System.out.println("Wrong letter. Try again.");
+            colours = ColoursName.valueOf(getColoursName());
+        }
+
+        switch (colours) {
             case B: System.out.println("Blue");
                 break;
             case Y: System.out.println("Yellow");
@@ -24,7 +32,7 @@ public class Colours {
     public static String getColoursName() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Try to type only the first letter of your favourite colour. Then wait and see what's gonna happen. Interested ? Ok, let's go. Please type a letter: ");
-        String Colours = scanner.nextLine().trim().toUpperCase();
-        return Colours;
+        String colour = scanner.nextLine().trim().toUpperCase();
+        return colour;
     }
 }
