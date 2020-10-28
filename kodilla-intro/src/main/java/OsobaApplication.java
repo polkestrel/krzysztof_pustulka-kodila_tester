@@ -1,14 +1,4 @@
-public class Osoba {
-
-    String name;
-    double age;
-    double height;
-
-    public Osoba(String name, double age, double height) {
-        this.name = name;
-        this.age = age;
-        this.height = height;
-    }
+public class OsobaApplication {
 
     public static void main(String[] args) {
         Osoba adam = new Osoba("Adam", 40.5, 178);
