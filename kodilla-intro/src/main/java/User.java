@@ -33,7 +33,6 @@ public class User {
         int average = result/numberOfUsers;
             System.out.println("Srednia wieku wszystkich user'ow wynosi: " + average);
 
-
         for (int i = 0; i < users.length; i++) {     //petla do sprawdzania który user ma wiek mniejszy od średniej wieku wszystkich userow
             if (users[i].userAge < average) {
                 System.out.println("User: " + users[i].userName + " ma " + users[i].userAge + " lat i jego wiek jest niższy od średniej wieku wszystkich userow wynoszącej: " + average);
