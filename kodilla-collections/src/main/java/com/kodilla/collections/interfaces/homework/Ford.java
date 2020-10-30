@@ -28,4 +28,13 @@ public class Ford implements Car {
     public int decreaseSpeed() {
         return speed - decrease;
     }
+
+    @Override
+    public String toString() {
+        return "Ford{" +
+                "speed=" + speed +
+                ", increase=" + increase +
+                ", decrease=" + decrease +
+                '}';
+    }
 }

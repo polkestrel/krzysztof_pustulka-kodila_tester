@@ -26,4 +26,13 @@ public class Lada implements Car {
     public int decreaseSpeed() {
         return speed - decrease;
     }
+
+    @Override
+    public String toString() {
+        return "Lada{" +
+                "speed=" + speed +
+                ", increase=" + increase +
+                ", decrease=" + decrease +
+                '}';
+    }
 }
