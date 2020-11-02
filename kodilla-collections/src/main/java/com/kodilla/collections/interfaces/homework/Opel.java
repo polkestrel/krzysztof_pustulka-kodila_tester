@@ -19,12 +19,14 @@ public class Opel implements Car {
 
     @Override
     public int increaseSpeed() {
-        return speed + increase;
+        speed = speed + increase;
+        return speed;
     }
 
     @Override
     public int decreaseSpeed() {
-        return speed - decrease;
+        speed = speed - decrease;
+        return speed;
     }
 
     @Override

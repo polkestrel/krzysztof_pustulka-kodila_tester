@@ -1,6 +1,7 @@
 package com.kodilla.collections.interfaces.homework;
 
 import javax.print.DocFlavor;
+import java.util.Objects;
 
 public class Ford implements Car {
 
@@ -21,12 +22,14 @@ public class Ford implements Car {
 
     @Override
     public int increaseSpeed() {
-        return speed + increase;
+        speed = speed + increase;
+        return speed;
     }
 
     @Override
     public int decreaseSpeed() {
-        return speed - decrease;
+        speed = speed - decrease;
+        return speed;
     }
 
     @Override
@@ -36,5 +39,20 @@ public class Ford implements Car {
                 ", increase=" + increase +
                 ", decrease=" + decrease +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Ford ford = (Ford) o;
+        return speed == ford.speed &&
+                increase == ford.increase &&
+                decrease == ford.decrease;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(speed, increase, decrease);
     }
 }
