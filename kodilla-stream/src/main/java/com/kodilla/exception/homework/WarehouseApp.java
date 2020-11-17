@@ -17,13 +17,5 @@ public class WarehouseApp {
         } finally {
             System.out.println("The process has been finalized.");
         }
-
-
-        /*
-        W metodzie main dodaj kilka zamówień do hurtowni
-        przy pomocy metody addOrder(), a następnie spróbuj wyszukać jakieś
-        nieistniejące zamówienie.
-        Przygotuj odpowiednią obsługę błędów.
-         */
     }
 }
