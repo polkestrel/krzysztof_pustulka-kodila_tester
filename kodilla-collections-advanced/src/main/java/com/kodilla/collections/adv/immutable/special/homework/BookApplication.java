@@ -9,8 +9,21 @@ public class BookApplication {
         bookManager.createBook("Po piśmie","Jacek Dukaj");
         System.out.println("-----------------");
         System.out.println("Database consits: " + bookManager.getBooks().size() + " books.");
-        //System.out.println(bookManager.getBooks().get(0).getAuthor());
-        //System.out.println(bookManager.getBooks().get(1).getAuthor());
-        //System.out.println(bookManager.getBooks().get(2).getAuthor());
+        System.out.println("----------------");
+        System.out.println("Solaris" == "Dune");
+        System.out.println("Solaris".equals("Dune"));
+        System.out.println("----------------");
+        System.out.println("Po piśmie" == "Dune");
+        System.out.println("Po piśmie".equals("Dune"));
+        System.out.println("----------------");
+        System.out.println("Stanisław Lem" == "Frank Herbert");
+        System.out.println("Stanisław Lem".equals("Frank Herbert"));
+        System.out.println("----------------");
+        System.out.println("Frank Herbert" == "Jacek Dukaj");
+        System.out.println("Frank Herbert".equals("Jacek Dukaj"));
+        System.out.println("----------------");
+        System.out.println("Frank Herbert" == "Frank Herbert");
+        System.out.println("Frank Herbert".equals("Frank Herbert"));
+        System.out.println("----------------");
         }
     }
