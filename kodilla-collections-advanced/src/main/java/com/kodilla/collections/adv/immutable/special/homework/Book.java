@@ -1,6 +1,5 @@
 package com.kodilla.collections.adv.immutable.special.homework;
 
-import java.util.ArrayList;
 import java.util.Objects;
 
 public class Book {
