@@ -60,7 +60,7 @@ class ShopTestSuite {
     public void shouldReturnTheListOfOrdersWhenDatesAreCorrect() {
         //Then
         assertEquals(6,shop.getOrderListBasedOnTheRangeOfTwoDates(LocalDate.of(2010,1,1),LocalDate.of(2020,12,30)).size());
-        System.out.println("Second test accomplished.");
+        //System.out.println("Second test accomplished.");
     }
 
     // sprawdzenie czy zwraca listę zamówień w oparciu o prawidłowe wartości min/max zamówień
