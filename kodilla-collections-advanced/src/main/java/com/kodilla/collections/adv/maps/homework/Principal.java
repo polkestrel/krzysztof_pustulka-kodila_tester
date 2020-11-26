@@ -13,15 +13,15 @@ public class Principal {
         this.schoolname = schoolname;
     }
 
-    public String getPrincipalfirstname() {
+    public String getPrincipalFirstName() {
         return principalfirstname;
     }
 
-    public String getPrincipallastname() {
+    public String getPrincipalLastName() {
         return principallastname;
     }
 
-    public String getSchoolname() {
+    public String getSchoolName() {
         return schoolname;
     }
 
