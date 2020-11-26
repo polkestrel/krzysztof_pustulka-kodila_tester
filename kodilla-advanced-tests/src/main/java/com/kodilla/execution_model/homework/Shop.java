@@ -13,6 +13,7 @@ public class Shop {
     }
 
     public List<Order> getOrderListBasedOnTheRangeOfTwoDates(LocalDate firstDateIsFurtherInThePast, LocalDate secondDateIsCloserToThePresent) {
+        /*
         if (firstDateIsFurtherInThePast.isAfter(secondDateIsCloserToThePresent)) {
             System.out.println("Your dates are in wrong order." +
                     "Please bear in mind that your first date: " + firstDateIsFurtherInThePast + " has to be a date situated in time BEFORE your second date: " +
@@ -23,6 +24,7 @@ public class Shop {
             System.out.println("Your dates are wrong. You can not choose dates from the future");
             return null;
         }
+         */
         List<Order> twoDatesList = orderList
                 .stream()
                 .filter(o -> o.getDate().isAfter(firstDateIsFurtherInThePast))
@@ -30,10 +32,14 @@ public class Shop {
                 .collect(Collectors.toList());
         if (twoDatesList.isEmpty()) {
             System.out.println("There is no orders within chosen timeframe. Pick another two dates.");
-            return null;
+            // return null;
         }
-        System.out.println("Your list based on two dates contains the following list of orders: " + twoDatesList);
-        return twoDatesList;
+        //System.out.println("Your list based on two dates contains the following list of orders: " + twoDatesList);
+        return orderList
+                .stream()
+                .filter(o -> o.getDate().isAfter(firstDateIsFurtherInThePast))
+                .filter(on -> on.getDate().isBefore(secondDateIsCloserToThePresent))
+                .collect(Collectors.toList());
     }
 
     public List<Order> getOrderListBasedOnTheMinAndMaxValue(double minValue, double maxValue) {
