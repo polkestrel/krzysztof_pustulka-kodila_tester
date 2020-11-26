@@ -10,7 +10,10 @@ public class Person {
         this.weightInKilogram = weightInKilogram;
     }
 
-    public String getBMI() {
+    public String getBMI() throws Exception {
+        if (heightInMeters == 0 || weightInKilogram == 0) {
+            throw new Exception("Pamiętaj nie dziel przez zero.");
+        }
         double bmi = weightInKilogram / (heightInMeters * heightInMeters);
         if (bmi < 15) {
             return "Very severely underweight";
