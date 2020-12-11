@@ -49,8 +49,13 @@ class BoookController {
         bookService.addBook(bookDto);
     }
 
-    @DeleteMapping
-    public void delBook(@RequestBody BookDto bookDto) {
-        bookService.removeBook(bookDto);
+//    @DeleteMapping()
+//    public void delBook(@RequestBody BookDto bookDto) {
+//        bookService.removeBook(bookDto);
+//    }
+
+    @DeleteMapping(value = "/{index}/")
+    public void delBook(@PathVariable int index) {
+        bookService.removeBook(index);
     }
 }
