@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 
-// @RestController – adnotacja ta mówi o tym, że nasza klasa jest
+    // @RestController – adnotacja ta mówi o tym, że nasza klasa jest
     // kontrolerem REST API. Oznacza to tyle, że będzie ona odpowiedzialna za
     // obsługę napływających żądań http request oraz za generowanie odpowiedzi http response.
 
@@ -36,7 +36,7 @@ class BoookController {
 //    }
 
     @GetMapping
-    public List<BookDto> getBooks() {
+    public List<BookDto> getBooks(List<BookDto> booksList) {
         return bookService.getBooks();
     }
 
