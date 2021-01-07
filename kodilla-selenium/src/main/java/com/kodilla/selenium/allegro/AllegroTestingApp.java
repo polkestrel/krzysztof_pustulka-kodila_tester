@@ -4,18 +4,22 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.Select;
 
 public class AllegroTestingApp {
     public static void main(String[] args) {
-        // otwórz w przeglądarce portal Allegro, a następnie przełącz kategorię produktów na Elektronika
-        // i w polu wyszukiwania wpisz "Mavic mini"
-        // Korzystając z XPath-Relative, napisz kod ustawiający żądane wartości
-        // w polach kryteriów wyszukiwania oraz kliknij w przycisk "Szukaj".
 
         System.setProperty("webdriver.chrome.driver", "/SelfLearning/Selenium-drivers/Chrome/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
-        driver.get("https://allegro.pl/");
+        driver.get("https://www.ebay.com/");
 
+        WebElement searchField = driver.findElement(By.xpath("//*[@id=\"gh-cat-box\"]/select"));
+        Select categorySelect = new Select(searchField);
+        categorySelect = new Select(searchField);
+        categorySelect.selectByValue("293");
+
+        WebElement inputField = driver.findElement(By.xpath("//*[@id=\"gh-ac-box2\"]/input"));
+        inputField.sendKeys("Mavic mini");
+        inputField.submit();
     }
 }
