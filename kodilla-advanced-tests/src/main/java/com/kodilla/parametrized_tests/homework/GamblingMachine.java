@@ -9,6 +9,7 @@ public class GamblingMachine {
     public int howManyWins(Set<Integer> userNumbers) throws InvalidNumbersException {
         validateNumbers(userNumbers);
         Set<Integer> computerNumbers = generateComputerNumbers();
+        System.out.println("Randomly chosen numbers by machine are: " + computerNumbers);
         int count = 0;
         for (Integer number : userNumbers) {
             if (computerNumbers.contains(number)) {

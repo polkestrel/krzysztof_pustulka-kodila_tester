@@ -21,6 +21,8 @@ public class User {
         User stas = new User("Staś", 7);
         User antek = new User("Antek", 5);
 
+        System.out.println(krzysztof.userName.substring(0,1));
+
         User[] users = {krzysztof, anna, mariusz, waldek, marek, stas, antek};      //stworzenie tablicy z imionami userow
 
         int result = 0;

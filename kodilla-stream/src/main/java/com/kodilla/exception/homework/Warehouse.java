@@ -12,6 +12,10 @@ public class Warehouse {
         System.out.println("Order number: " + order + " has been just added.");
     }
 
+    public static List<Order> getOrdersList() {
+        return ordersList;
+    }
+
     public static Order getOrder(String number) throws OrderDoesntExistException {
         System.out.println("Now you are looking for order number: " + number);
         return ordersList

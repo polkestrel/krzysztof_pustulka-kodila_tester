@@ -1,8 +1,7 @@
 package com.kodilla.collections.adv.exercises.homework;
 
-import com.kodilla.collections.adv.exercises.dictionary.EnglishWord;
-
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class FlightFinder {
 
@@ -11,11 +10,10 @@ public class FlightFinder {
     */
     public List<Flight> findFlightsFrom(String departure) {
         List<Flight> departureTable = new ArrayList<>();
-        for (Flight flight : FlightRepository.getFlightsTable()) {
-            if (flight.getDeparture().equals(departure)) {
+        //FlightRepository.getFlightsTable().stream().filter(flight -> flight.getDeparture().equals(departure)).findAny().
+        for (Flight flight : FlightRepository.getFlightsTable())
+            if (flight.getDeparture().equals(departure))
                 departureTable.add(flight);
-            }
-        }
         return departureTable;
     }
 
@@ -24,11 +22,9 @@ public class FlightFinder {
     */
         public List<Flight> findFlightsTo(String arrival) {
             List<Flight> arrivalTable = new ArrayList<>();
-            for (Flight flight: FlightRepository.getFlightsTable()) {
-                if (flight.getArrival().equals(arrival)) {
+            for (Flight flight: FlightRepository.getFlightsTable())
+                if (flight.getArrival().equals(arrival))
                     arrivalTable.add(flight);
-            }
-        }
             return arrivalTable;
     }
 }

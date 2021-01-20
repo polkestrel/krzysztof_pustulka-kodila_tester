@@ -9,9 +9,12 @@ import org.openqa.selenium.support.ui.Select;
 public class AllegroTestingApp {
     public static void main(String[] args) {
 
-        System.setProperty("webdriver.chrome.driver", "/SelfLearning/Selenium-drivers/Chrome/chromedriver.exe");
+        // Sprawdzić WebdriverManager - sprawdzić.
+        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.ebay.com/");
+        //driver.get("https://allegro.pl/");
+        //driver.navigate().to("http://www.allegro.pl/");;
 
         WebElement searchField = driver.findElement(By.xpath("//*[@id=\"gh-cat-box\"]/select"));
         Select categorySelect = new Select(searchField);
